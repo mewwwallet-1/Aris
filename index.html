@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mew Wallet</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #111;
+      color: White;
+      padding-top: 100px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: gold;
+      cursor: pointer;
+    }
+
+    #box {
+      display: none;
+      margin-top: 30px;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #request {
+      color: orange;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>MEW WALLET</h1>
+  <h2>Welcome Aris Groenendijk</h2>
+  <h3>To withdraw your €11,828</h3>
+
+  <h2>Enter Code</h2>
+
+  <input type="text" id="codeBox" placeholder="Enter code">
+  <br><br>
+
+  <button onclick="checkCode()">Submit</button>
+
+  <p id="result"></p>
+  <p id="request"></p>
+
+  <div id="box">
+    <h2>Access Granted ✅</h2>
+    <p>Your balance: €11,828</p>
+  </div>
+<h3>Simulate a payment of €250 to continue</h3>
+  <script>
+    function checkCode() {
+      let code = document.getElementById("codeBox").value;
+
+      if (code === "5398") {
+        document.getElementById("result").innerText = "Correct code ✅";
+        document.getElementById("request").innerText = "";
+        document.getElementById("box").style.display = "block";
+      } else {
+        document.getElementById("result").innerText = "Wrong code ❌";
+        document.getElementById("request").innerHTML = "<u>Request new code</u>";
+      }
+    }
+  </script>
+
+</body>
+</html>
