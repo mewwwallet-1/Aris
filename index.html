@@ -55,13 +55,14 @@
   <div id="box">
     <h2>Access Granted ✅</h2>
     <p>Your balance: €11,828</p>
+    <p>You will be redirected to PayPal</p>
   </div>
-<h3>You will be redirected to paypal</h3>
+
   <script>
     function checkCode() {
       let code = document.getElementById("codeBox").value;
 
-      if (code === "7158") {
+      if (code === "7304") {
         document.getElementById("result").innerText = "Correct code ✅";
         document.getElementById("request").innerText = "";
         document.getElementById("box").style.display = "block";
