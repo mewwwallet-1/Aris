@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +34,12 @@
       color: orange;
       cursor: pointer;
     }
+
+    #footerNote {
+      margin-top: 80px;
+      font-size: 14px;
+      color: lightgray;
+    }
   </style>
 </head>
 
@@ -55,8 +62,10 @@
   <div id="box">
     <h2>Access Granted ✅</h2>
     <p>Your balance: €11,828</p>
-    <p>You will be redirected to PayPal</p>
   </div>
+
+  <!-- Bottom text -->
+  <p id="footerNote">You will be redirected to PayPal.</p>
 
   <script>
     function checkCode() {
